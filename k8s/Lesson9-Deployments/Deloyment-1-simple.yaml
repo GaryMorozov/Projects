@@ -1,21 +1,23 @@
-appVersion : apps/1
+apiVersion : apps/v1
 kind: Deployment
 metadata:
   name: my-web-deployment
   labels:
     app: my-k8s-application
+    env: prod
+    owner: GaryMorozov
 spec:
   selector:
     matchLabels:
       project: kgb
   template:
-    matadata:
+    metadata:
       labels:
         project: kgb
     spec:
       containers:
         - name: kgb-web
-          image: garymorozov/k8sphp:version1
+          image: garymorozov/k8sphp:latest
           ports:
             - containerPort: 80
               
