@@ -1,0 +1,24 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: my-web-deployment-replicas
+  labels:
+    app: my-k8s-application
+    env: prod
+    owner: GaryMorozov
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: cia
+  template:
+    metadata:
+      labels:
+        project: cia
+    spec:
+      containers:
+        - name: cia-web
+          image: garymorozov/k8sphp
+          ports:
+            - containerPort: 80
+              
