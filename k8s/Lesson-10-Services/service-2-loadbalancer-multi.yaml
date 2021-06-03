@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name : my-web
-          image: adv4000/k8sphp:latest
+          image: garymorozov/k8sphp:latest
           ports:
             - containerPort: 80   # Port on Pod
 
