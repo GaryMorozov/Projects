@@ -1,8 +1,13 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
 class GroupsWidget extends StatelessWidget {
   const GroupsWidget({super.key});
+
+  void showForm(BuildContext context) {
+    Navigator.of(context).pushNamed('/groups/form');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +17,7 @@ class GroupsWidget extends StatelessWidget {
       ),
       body: const _GroupList(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => showForm(context),
         child: const Icon(Icons.add),
       ),
     );
