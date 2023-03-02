@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8246f061-7721-457d-8a94-a28bd252b3c4" name="Changes" comment="" />
+    <list default="true" id="8246f061-7721-457d-8a94-a28bd252b3c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson_1/lesson_1/todolist/lib/widgets/group_form/group_form_widget_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson_1/lesson_1/todolist/lib/widgets/group_form/group_form_widget_model.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

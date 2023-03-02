@@ -2,18 +2,31 @@ import 'package:flutter/material.dart';
 
 class GroupFormWidgetModel {}
 
-class Name extends InheritedWidget {
-  const Name({super.key, required this.child}) : super(child: child);
+class GroupFormWidgetModelProvider extends InheritedWidget {
+  final GroupFormWidgetModel model;
+  const GroupFormWidgetModelProvider({
+    Key? key,
+    required this.model,
+    required Widget child,
+  }) : super(
+          key: key,
+          child: child,
+        );
 
-  final Widget child;
+  static GroupFormWidgetModelProvider? watch(BuildContext context) {
+    return context
+        .dependOnInheritedWidgetOfExactType<GroupFormWidgetModelProvider>();
+  }
 
-  static Name? of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<Name>();
+  static GroupFormWidgetModelProvider? read(BuildContext context) {
+    final widget = context
+        .getElementForInheritedWidgetOfExactType<GroupFormWidgetModelProvider>()
+        ?.widget;
+    return widget is GroupFormWidgetModelProvider ? widget : null;
   }
 
   @override
-  bool updateShouldNotify(Name oldWidget) {
+  bool updateShouldNotify(GroupFormWidgetModelProvider oldWidget) {
     return true;
   }
-}
 }
